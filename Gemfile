@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.1.2"
 
 gem "rails", "~> 7.0.3"
+gem "bootstrap-sass"
 gem "sassc-rails"
 gem "sprockets-rails"
 gem "importmap-rails"
@@ -16,6 +17,8 @@ gem "bootsnap", require: false
 group :development, :test do
   gem "sqlite3", "~> 1.4"
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "rubocop"
+  # gem 'ruby-lsp', require: false
 end
 
 group :development do
