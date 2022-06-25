@@ -3,22 +3,24 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
-gem "rails", "~> 7.0.3"
+
+
+gem "bcrypt"
+gem "bootsnap", require: false
 gem "bootstrap-sass"
-gem "sassc-rails"
-gem "sprockets-rails"
 gem "importmap-rails"
-gem "turbo-rails"
-gem "stimulus-rails"
 gem "jbuilder"
 gem "puma", "~> 5.0"
-gem "bootsnap", require: false
+gem "rails", "~> 7.0.3"
+gem "sassc-rails"
+gem "sprockets-rails"
+gem "stimulus-rails"
+gem "turbo-rails"
 
 group :development, :test do
-  gem "sqlite3", "~> 1.4"
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem "rubocop"
-  # gem 'ruby-lsp', require: false
+  gem "sqlite3", "~> 1.4"
 end
 
 group :development do
