@@ -3,8 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
-
-
 gem "bcrypt"
 gem "bootsnap", require: false
 gem "bootstrap-sass"
@@ -19,7 +17,9 @@ gem "turbo-rails"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
-  gem "rubocop"
+  gem "rubocop", require: false
+  gem "rubocop-minitest"
+  gem "rubocop-rails"
   gem "sqlite3", "~> 1.4"
 end
 
