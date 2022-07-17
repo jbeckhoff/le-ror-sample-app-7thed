@@ -2,7 +2,8 @@
 User.create!(name: "John Beckhoff",
              email: "johnbeckhoff@outlook.com",
              password: "vanilla69",
-             password_confirmation: "vanilla69")
+             password_confirmation: "vanilla69",
+             admin: true)
 
 # Generate a bunch of additional users.
 99.times do |n|
